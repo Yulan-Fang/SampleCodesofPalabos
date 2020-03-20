@@ -125,6 +125,19 @@ int main(int argc, char* argv[]) {
     OnLatticeBoundaryCondition2D<T,DESCRIPTOR>*
         boundaryCondition = createLocalBoundaryCondition2D<T,DESCRIPTOR>();
 
+    
+/*因为在Palabos里导入dat格式数据，是将dat文件内逐行导入流域的列,
+/所以最初图片经过二值化后需要旋转一下，再输出为dat文件.
+/以下四行即导入1.dat文件，并将其设置为碰撞格子.
+/Poiseuille流的解释可以去下面这个网址看:
+/https://github.com/Yulan-Fang/PalabosCodeExplanation/blob/master/tutorial_1/tutorial_1_5.cpp
+*/
+/*Because when input dat data to Palabos, it's inputting row of data in dat file to Palabos's column,
+/so in the beginning the picture should be rotated after binarization and then output to dat file.
+/Below 4 lines code are input of 1.dat, and set them as BounceBack nodes.
+/Poiseuille flow's explanation can be seen in the website below:
+/https://github.com/Yulan-Fang/PalabosCodeExplanation/blob/master/tutorial_1/tutorial_1_5.cpp
+*/
  MultiScalarField2D<bool> boolMask(parameters.getNx(), parameters.getNy());
     plb_ifstream ifile("1.dat");
     ifile >> boolMask;
@@ -132,6 +145,7 @@ int main(int argc, char* argv[]) {
 
    //createPoiseuilleBoundaries(lattice, parameters, *boundaryCondition);
    //lattice.initialize();
+    
  channelSetup(lattice, parameters, *boundaryCondition);
     // Main loop over time iterations.
     for (plint iT=0; iT<40000; ++iT) {
