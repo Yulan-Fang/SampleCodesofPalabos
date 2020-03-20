@@ -3,3 +3,6 @@ This folder's loadGeometry.cpp is mainly based on tutorial_1_5 and loadGeometry 
 
 流场为Poiseuille流。
 It is poiseuille flow.
+
+你需要添加makefile，以及include路径和tmp文件夹用于输出。
+You need to add makefile, the include path inside makefile, and tmp folder for output.
