@@ -1,7 +1,7 @@
 clear
 clc
-// ÕâÀïµÄ1.pngÎª300¡Á900µÄÍ¼Æ¬
-// Here the size of 1.png is 300¡Á900 
+% è¿™é‡Œçš„1.pngä¸º300Ã—900çš„å›¾ç‰‡
+% Here the size of 1.png is 300*900 
 A=imread('1.png');  
 thresh=graythresh(A)
 B=im2bw(A,thresh);
