@@ -1,4 +1,4 @@
-该文件夹的rectangularChannel.cpp基于Palabos的examples/showCases/rectangularChannel3d所写，用于示范如何导入用二值化的图片制作的3D数据至流域中。
+该文件夹的rectangularChannel3D.cpp基于Palabos的examples/showCases/rectangularChannel3D所写，用于示范如何导入用二值化的图片制作的3D数据至流域中。
 This folder's rectangularChannel.cpp is mainly based on Palabos’ examples/showCases/rectangularChannel3d. For showing how to input 3D data made from binarized picture to the fluid domain.
 
 
