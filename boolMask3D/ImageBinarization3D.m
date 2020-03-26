@@ -1,8 +1,8 @@
 clear
 clc
 %% Clone and padding layers of the image in X axis direction for Palabos 
-% ÕâÀïµÄ1.pngÎª90¡Á30µÄÍ¼Æ¬
-% Here the size of 3D.png is 90¡Á30.
+% è¿™é‡Œçš„1.pngä¸º90Ã—30çš„å›¾ç‰‡
+% Here the size of 3D.png is 90Ã—30.
 Zlength= 30;
 %Your intended length of Z axis in Palabos
 fprintf('Your intended Z axis length is:%6.2f\n',Zlength)
@@ -27,9 +27,9 @@ for i=1:(Zlength-1) %Padding layers to Multiclone
 end
 %% Changing (y,x,Zlength) matrix to (Zlength,y,x) matrix.
 % Because in Palabos the data was read and write to domain in a pattern like below:
-% for X¡úXlength{
-%     for Y¡úYlength{
-%        for Z¡úZlength{
+% for Xâ†’Xlength{
+%     for Yâ†’Ylength{
+%        for Zâ†’Zlength{
 %           write to(nx,ny,nz);
 % }}}
 % So we need to make Matlab output with the Z values first.
@@ -39,9 +39,9 @@ CoordinatorMatrix=zeros([size(MultiCloneofConvertValueFlag,2),...%Image length
                         size(MultiCloneofConvertValueFlag,3),...%Zlength
                         size(MultiCloneofConvertValueFlag,1)]);%Image width
 Final3Ddata=CoordinatorMatrix;%Get the dimension of matrix MulticloneofConvertValueFlag
-for YLine=1:size(CoordinatorMatrix,1) %MatrixColumn should be image width, here for example is 90.
+for YLine=1:size(CoordinatorMatrix,1) %MatrixColumn should be image length, here for example is 270.
     for ZColumn=1:size(CoordinatorMatrix,2)%MatrixLine should be Zlength.
-        for ImageLayer=1:size(CoordinatorMatrix,3)%MatrixLayer should be image length.
+        for ImageLayer=1:size(CoordinatorMatrix,3)%MatrixLayer should be image width.
                   Final3Ddata( YLine,ZColumn,ImageLayer)=...
  MultiCloneofConvertValueFlag(ImageLayer,YLine,ZColumn);
         end
