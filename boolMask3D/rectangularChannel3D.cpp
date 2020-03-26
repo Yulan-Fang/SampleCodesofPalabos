@@ -247,7 +247,7 @@ int main(int argc, char* argv[]) {
 /*我们输入的矩阵是Matlab输出的270*30*90矩阵。
 /底下有getMultiBlockInfo(lattice)代码用于输出流场信息，本例结果是270*90*30。
 /The matrix we input from Matlab is a matrix with a size of 270*30*90.
-/In below there is a getMultiBlockInfo(lattice) for output the domain information, in this example is 270*90*30.
+/In below there is a getMultiBlockInfo(lattice) for output the domain information, in this example is 270*30*90.
 */
     IncomprFlowParam<T> parameters(
             uMax,
