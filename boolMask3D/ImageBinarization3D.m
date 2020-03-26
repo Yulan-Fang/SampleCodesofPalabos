@@ -32,7 +32,7 @@ end
 %        for Z→Zlength{
 %           write to(nx,ny,nz);
 % }}}
-% So we need to make Matlab output with the Z values first.
+% So we need to make Matlab output corresponding .
 % The aim of CoordinatorMatrix and Final3Ddata is (Yline,Zcolumn,Xlayers)
 % CoordinatorMatrix(Image width,Zlength,Image length)
 CoordinatorMatrix=zeros([size(MultiCloneofConvertValueFlag,2),...%Image length
