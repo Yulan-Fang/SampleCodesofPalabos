@@ -150,8 +150,8 @@ int main(int argc, char* argv[]) {
     Array<T,3> objectCenter = (T) 0.5 * (bCuboid.lowerLeftCorner + bCuboid.upperRightCorner);
     triangleSet.translate(-objectCenter);
     pcout << "The mesh center was moved to the (0,0,0)." << std::endl;
-    triangleSet.scale((T) 1 / 100); // convert to LB unit
-    triangleSet.scale((T) 100 / 100);//scaled to 1x%
+    triangleSet.scale((T) 1 / 1); // convert to LB unit
+    triangleSet.scale((T) 1 / 100);//scaled to 1%
     pcout << "The mesh scaled" << std::endl;
     DEFscaledMesh<T> *fishDef = new DEFscaledMesh<T>(triangleSet, 0, 0, 0, Dot3D(0, 0, 0));
     pcout << "The rectangle has " << fishDef->getMesh().getNumVertices() << " vertices and " <<
